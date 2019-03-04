@@ -60,6 +60,7 @@ public final class TestTools {
     
     public static void main(String[] args) throws Exception {
     	
+    	/*
     	String path1 = "C:\\Users\\nex1axi\\Documents\\TestDataOpenJump\\data\\sample\\dataset1.shp";
     	String path2 = "C:\\Users\\nex1axi\\Documents\\TestDataOpenJump\\data\\sample\\dataset2.shp";    	
     	final File file1 = new File(path1);
@@ -74,10 +75,10 @@ public final class TestTools {
             public void windowOpened(WindowEvent event) {
                 TestTools.openFile(new File(path2), workbench.getContext());
             }
-        });
+        });*/
     	
         
-    	/*
+    	
     	final File file1 = new File(args[0]);
     	final File file2 = new File(args[1]);    	
         final JUMPWorkbench workbench = TestTools.buildWorkbench(args);
@@ -90,7 +91,7 @@ public final class TestTools {
             public void windowOpened(WindowEvent event) {
                 TestTools.openFile(new File(args[1]), workbench.getContext());
             }
-        });*/
+        });
         
         
         

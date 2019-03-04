@@ -60,9 +60,9 @@ public final class TestTools {
     
     public static void main(String[] args) throws Exception {
     	
-    	/*
-    	String path1 = "C:\\Users\\nex1axi\\Documents\\TestDataOpenJump\\data\\sample\\dataset1.shp";
-    	String path2 = "C:\\Users\\nex1axi\\Documents\\TestDataOpenJump\\data\\sample\\dataset2.shp";    	
+    	
+    	String path1 = ".\\sample\\dataset1.shp";
+    	String path2 = ".\\sample\\dataset1.shp";    	
     	final File file1 = new File(path1);
     	final File file2 = new File(path2);    	
     	final JUMPWorkbench workbench = TestTools.buildWorkbench(args);
@@ -75,10 +75,10 @@ public final class TestTools {
             public void windowOpened(WindowEvent event) {
                 TestTools.openFile(new File(path2), workbench.getContext());
             }
-        });*/
+        });
     	
         
-    	
+    	/*
     	final File file1 = new File(args[0]);
     	final File file2 = new File(args[1]);    	
         final JUMPWorkbench workbench = TestTools.buildWorkbench(args);
@@ -91,7 +91,7 @@ public final class TestTools {
             public void windowOpened(WindowEvent event) {
                 TestTools.openFile(new File(args[1]), workbench.getContext());
             }
-        });
+        });*/
         
         
         
@@ -136,12 +136,14 @@ public final class TestTools {
         TaskMonitor monitor = new DummyTaskMonitor();
         Setup setup = new JUMPConfiguration();
         
-        final CommandLine commandLine2 = new CommandLine();
+        char c = '-';
+        final CommandLine commandLine2 = new CommandLine(c);
         OptionSpec optSpec = new OptionSpec("name", "value");
-        commandLine2.addOptionSpec(optSpec);
         System.out.println("The command line is " + commandLine2.getOption("name"));
         
         privateStaticField(JUMPWorkbench.class, "commandLine", new CommandLine());
+        
+        
         
         File tryingDirectory = new File("./lib/ext");
         System.out.println("The directory is = " + tryingDirectory);
